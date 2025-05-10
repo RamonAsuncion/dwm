@@ -4,30 +4,29 @@
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 8;        /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Terminus:size=21" };
-static const char dmenufont[]       = "Terminus:size=21";
+static const int topbar             = 0;        /* 0 means bottom bar */
+static const char *fonts[]          = { "Iosevka NFM:style=Regular:size=21" }; 
+static const char dmenufont[]       = "Iosevka NFM:style=Regular:size=21";
 
 static const char *colors[][12]      = {
-/*					fg         bg          border   */
-	[SchemeNorm] =  { "#373b41",  "#1d1f21", "#282a2e" },
-	[SchemeSel]  =  { "#c5c8c6",  "#1d1f21", "#f0c674" },
-	[SchemeWarn] =  { "#1d1f21",  "#f0c674", "#dc322f" },
-	[SchemeUrgent]= { "#282a2e",  "#1d1f21", "#282a2e" },
-	[SchemeCol1] =  { "#1d1f21",  "#282a2e", "#282a2e" },
-	[SchemeCol2] =  { "#cc6666",  "#1d1f21", "#282a2e" },
-	[SchemeCol3] =  { "#b5bd68",  "#1d1f21", "#282a2e" },
-	[SchemeCol4] =  { "#de935f",  "#1d1f21", "#282a2e" },
-	[SchemeCol5] =  { "#f0c674",  "#282a2e", "#282a2e" },
-	[SchemeCol6] =  { "#81a2be",  "#282a2e", "#282a2e" },
-	[SchemeCol7] =  { "#b294bb",  "#282a2e", "#282a2e" },
-	[SchemeCol8] =  { "#8abeb7",  "#282a2e", "#282a2e" },
+	/*                fg         bg         border   */
+	[SchemeNorm]   = { "#d0d0d0", "#1c1c1c", "#444444" }, // normal
+	[SchemeSel]    = { "#eeeeee", "#5fafd7", "#00afaf" }, // selected
+	[SchemeWarn]   = { "#1c1c1c", "#ffaf00", "#d70000" }, // warning
+	[SchemeUrgent] = { "#1c1c1c", "#ff5faf", "#af0000" }, // urgent
+	[SchemeCol1]   = { "#af005f", "#1c1c1c", "#444444" }, // red
+	[SchemeCol2]   = { "#5faf00", "#1c1c1c", "#444444" }, // green
+	[SchemeCol3]   = { "#d7af5f", "#1c1c1c", "#444444" }, // yellow
+	[SchemeCol4]   = { "#5fafd7", "#1c1c1c", "#444444" }, // blue
+	[SchemeCol5]   = { "#ffaf00", "#1c1c1c", "#444444" }, // orange
+	[SchemeCol6]   = { "#00afaf", "#1c1c1c", "#444444" }, // cyan
+	[SchemeCol7]   = { "#af87d7", "#1c1c1c", "#444444" }, // violet
+	[SchemeCol8]   = { "#5f8787", "#1c1c1c", "#444444" }, // grey
 };
 
-
 /* tagging */
-static const char *tags[] = { "\uE1A0", "\uE074", "\uE1A1", "\uE1A2", "\uE229",
-                              "\uE09F", "\uE05C", "\uE14D", "\uE00E" };
+static const char *tags[] = { "\uf015", "\uea85", "\uf001", "\uf0e0", "\ueb01", 
+			      "\ueac4", "\ue5ff", "\uf27a", "\uf01f" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -46,10 +45,10 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
 static const Layout layouts[] = {
-	/* symbol     arrange function */
-	{ "\uE1AA \uE009 \uE1AA",      tile },    /* first entry is default */
-	{ "\uE1AA \uE1AC \uE1AA",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+    /* symbol     arrange function */
+    { "\uf0b2",      tile },    /* first entry is default */
+    { "\uf0b2 \uf0c9",      NULL },    /* no layout function means floating behavior */
+    { "\uf0b2 \uf0c8",      monocle },
 };
 
 /* key definitions */
