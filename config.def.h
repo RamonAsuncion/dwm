@@ -8,25 +8,25 @@ static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Iosevka NFM:style=Regular:size=21" }; 
 static const char dmenufont[]       = "Iosevka NFM:style=Regular:size=21";
 
+/* color scheme: base16 black metal (bathory) */ 
 static const char *colors[][12]      = {
 	/*                fg         bg         border   */
-	[SchemeNorm]   = { "#d0d0d0", "#1c1c1c", "#444444" }, // normal
-	[SchemeSel]    = { "#eeeeee", "#5fafd7", "#00afaf" }, // selected
-	[SchemeWarn]   = { "#1c1c1c", "#ffaf00", "#d70000" }, // warning
-	[SchemeUrgent] = { "#1c1c1c", "#ff5faf", "#af0000" }, // urgent
-	[SchemeCol1]   = { "#af005f", "#1c1c1c", "#444444" }, // red
-	[SchemeCol2]   = { "#5faf00", "#1c1c1c", "#444444" }, // green
-	[SchemeCol3]   = { "#d7af5f", "#1c1c1c", "#444444" }, // yellow
-	[SchemeCol4]   = { "#5fafd7", "#1c1c1c", "#444444" }, // blue
-	[SchemeCol5]   = { "#ffaf00", "#1c1c1c", "#444444" }, // orange
-	[SchemeCol6]   = { "#00afaf", "#1c1c1c", "#444444" }, // cyan
-	[SchemeCol7]   = { "#af87d7", "#1c1c1c", "#444444" }, // violet
-	[SchemeCol8]   = { "#5f8787", "#1c1c1c", "#444444" }, // grey
+	[SchemeNorm]   = { "#c1c1c1", "#000000", "#222222" },
+	[SchemeSel]    = { "#000000", "#fbcb97", "#888888" },
+	[SchemeWarn]   = { "#000000", "#e78a53", "#5f8787" },
+	[SchemeUrgent] = { "#000000", "#5f8787", "#e78a53" },
+	[SchemeCol1]   = { "#5f8787", "#000000", "#222222" },
+	[SchemeCol2]   = { "#fbcb97", "#000000", "#222222" },
+	[SchemeCol3]   = { "#e78a53", "#000000", "#222222" },
+	[SchemeCol4]   = { "#888888", "#000000", "#222222" },
+	[SchemeCol5]   = { "#aaaaaa", "#000000", "#222222" },
+	[SchemeCol6]   = { "#aaaaaa", "#000000", "#222222" },
+	[SchemeCol7]   = { "#999999", "#000000", "#222222" },
+	[SchemeCol8]   = { "#444444", "#000000", "#222222" },
 };
 
 /* tagging */
-static const char *tags[] = { "\uf015", "\uea85", "\uf001", "\uf0e0", "\ueb01", 
-			      "\ueac4", "\ue5ff", "\uf27a", "\uf01f" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -45,10 +45,10 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
 static const Layout layouts[] = {
-    /* symbol     arrange function */
-    { "\uf0b2",      tile },    /* first entry is default */
-    { "\uf0b2 \uf0c9",      NULL },    /* no layout function means floating behavior */
-    { "\uf0b2 \uf0c8",      monocle },
+	/* symbol     arrange function */
+	{ "[]=",      tile },    /* first entry is default */
+	{ "><>",      NULL },    /* no layout function means floating behavior */
+	{ "[M]",      monocle },
 };
 
 /* key definitions */
